@@ -1,0 +1,54 @@
+<!-- 
+	화면에 그림을 그려주고 만들기 
+	나중에 JSP에서 사용함
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>회원 가입</legend>
+			<ol>
+				<li><label for="name">이름</label> <input id="name" type="text"  /></li>
+				<li><label for="gender">성별</label> 
+					<input type="radio"  value="남자"  name ="gender" id="gender"  checked = "checked"  />남자
+					<input type="radio"  value="여자"  name ="gender" id="gender" />여자
+				</li>
+				<li><label for="job">직업</label> 
+					<select id = "job">
+						<option value="dogfoot">개발자</option>
+						<option value="noga">노가다</option>
+						<option value="pro" selected ="selected">프로그래머</option>
+					</select>
+				</li>
+				<li><label for="hobby">취미</label> 
+					<input type="checkbox"  name = "hobby" id="hobby" value="잠자기" checked="checked"/>잠자기
+					<input type="checkbox"  name = "hobby"  id="hobby" value="먹기" />먹기
+					<input type="checkbox"  name = "hobby"  id="hobby" value="숨쉬기" />숨쉬기
+					<input type="checkbox"  name = "hobby"  id="hobby" value="멍때리기" />멍때리기
+				</li>
+				<!-- 성별을 하나 더 추가  -->
+				<li>
+					<label for='gender2'>성별</label>
+					<input type='radio' name='gender2' value='남자'/> 남자
+					<input type='radio' name='gender2'  value='여자'/> 여자
+				</li>
+				<!-- 데이타리스트 -->
+					 가장 여행하고 픈 나라 : <input type="text" list="countries" /> <!--  name='countries' -->
+					<datalist id="countries">
+						<option value="가나">
+						<option value="스위스">
+						<option value="브라질">
+					</datalist>
+				 <!-- 브라우저 창에서 url확인 후 결과가 보이는 것과 안 보이는 것의 차이는? name 부여 여부  -->
+				<li><input id="ok" value="확인" type="submit" /> <input id="ok" value="취소" type="reset" /></li>
+			</ol>
+		</fieldset>
+	</form>
+</body>
+</html>

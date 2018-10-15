@@ -1,0 +1,18 @@
+
+1. 오라클 드라이버 연결
+
+2. 연결 확인
+	
+	각 화일에 디비서버 IP로 수정
+
+3. 디비 테이블 
+
+CREATE SEQUENCE seq_review_no;
+
+CREATE TABLE item_review(
+  no number,
+  name varchar2(40),
+  item varchar2(100),
+  content varchar2(500),
+  stars varchar2(2)
+); 

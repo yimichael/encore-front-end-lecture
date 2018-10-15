@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+   <link href="./custom/kfonts2.css" rel="stylesheet">   
+  </head>
+<body>
+ <div class="container">  
+<h1> 드롭다운 </h1>
+
+<hr>
+<h4> 네비게이션 바 드롭다운 </h4>
+    <nav class='navbar navbar-primary' role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div calss='navbar-header'>
+        <button class='navbar-toggle' type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span> <!-- sr-only는 시각장애인용 코딩. 화면상엔 미표시. -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class='navbar-brand'	href="#">식단 </a>
+      </div>
+     
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class='nav navbar-nav'>
+          <li class='dropdown'>
+            <a class='dropdown-toggle'	href="#" data-toggle="dropdown">아침 <b class="caret"></b></a>
+            <ul class='dropdown-menu'>
+              <li><a href="#">베이글&우유</a></li>
+              <li><a href="#">밥</a></li>
+              <li><a href="#">보충제</a></li>
+            </ul>
+          </li>
+          <li class='dropdown'>
+            <a class='dropdown-toggle' href="#"  data-toggle="dropdown">점심 <b class="caret"></b></a>
+            <ul class='dropdown-menu'>
+              <li><a href="#">전채</a></li>
+              <li><a href="#">정식</a></li>
+              <li><a href="#">후식</a></li>
+            </ul>
+		</li>
+          <li class='dropdown'>
+            <a class='dropdown-toggle'	href="#" data-toggle="dropdown">저녁 <b class="caret"></b></a>
+            <ul class='dropdown-menu'>
+              <li><a href="#">닭가슴살</a></li>
+              <li><a href="#">홍두깨살</a></li>
+              <li><a href="#">뒷다리살</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+
+</body>
+</html>

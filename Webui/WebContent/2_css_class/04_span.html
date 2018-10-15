@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>푸터 영역  | WebCafe</title>
+
+<style type="text/css">
+
+ul.guideMenu > li {
+display : inline;
+padding : 0px 10px
+} 
+
+ul.guideMenu > li > a {
+text-decoration : none;
+}
+
+ul.guideMenu > li > a:hover {
+color: orange
+}
+
+address .addr {
+	cursor:pointer;
+}
+
+address .tel {
+	cursor:progress;
+}
+
+address .fax{
+	cursor:not-allowed;
+}
+
+address .email{
+	cursor:help;
+}
+
+h2 {
+border : 3px solid black;
+border-radius : 20px 30px 40px 50px red;   /* 직사각형의 11시 방향, 1시 방향, 5시 방향, 7시 방향을 가리킴. border-radius에선 top,r,b,l이 아님 */
+-o-border-radius : 20px 30px 40px 50px red;
+-webkit-border-radius: 20px 30px 40px 50px red;
+-ms-border-radius: 20px 30px 40px 50px red;
+-mox-border-radius: 20px 30px 40px 50px red;
+/* border- radius, image 외 새로 나온 애들이 브라우저 표준이 안되있는 경우, 브라우저별 개별 적용으로 작성 */
+}
+
+address { 
+    
+	padding:0 0 15px 3px;	/* 	padding: 테두리(border)와 내용(content)사이의 여백 */
+		/* 	0 0 15px 3px 여백 순서를 가르키며 top, right, bottom, left 순으로 시계 순으로 돌아감. 즉 0(top), 0(right) 15px(bottom), 3px(left)임 */
+ 	font-size:15px;  	/* px(web), em(mobile), % */ 
+	line-height:1.5;   	/* 	글씨 높이. 기본 브라우저 보통 1.2 */
+	color:#787878;
+} 
+
+address .addr {
+	padding-right:10px; 	/* right 패딩만 지정하겠다는 거임 */
+	color : #9922cc;
+	font-size: 18px;
+}
+address .tel, address .fax {
+	padding: 0px 3px; 	 	/* 직사각형의 경우 top과 bottom, right와 left를 동일하게 가져가란 의미임. */
+	color : #aa3302;
+	font-family : Serif;	/*폰트체 */
+}
+
+address .copyright {
+	padding-right:10px;
+	color : #ee1212;
+	font-size: 13px;
+}
+
+</style>
+</head>
+
+
+<body>
+<div id="footer">
+  <div class="footerInner">
+    <p class="footerLogo"><img src="../images/common/logo_copyright.gif" alt="WebCafe" /></p>
+    <h2>사이트 이용안내</h2>
+    <ul class="guideMenu">
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">개인정보보호정책</a></li>
+      <li><a href="#">이메일주소무단수집거부</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Site map</a></li>
+    </ul>
+    <address>
+    	<span class="addr">서울시 마포구 상수동 123-12 한주빌딩 5층</span>
+    	<span class="tel">· 전화: 02-1234-1234</span> 
+		<span class="fax">· FAX: 02-1234-1234</span> 
+		<span class="email">· E-MAIL: webmaster@mail.com</span><br />
+   	 	<span class="copyright">Copyright ⓒ Web Cafe CORPORATION ALL RIGHTS RESERVED.</span>
+    </address>
+  </div>
+</div>
+</body>
+</html>

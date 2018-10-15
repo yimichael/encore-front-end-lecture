@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<fieldset>
+		<legend>회원 가입</legend>
+		<ol>
+			<li>
+			<label for='name'>이름</label> 
+			<input type='name' name='name'id='name'></li>
+			<li><label for='gender'>성별</label> 
+			<input type='radio'name='gender' value='남자'>남자 
+			<input type='radio'name='gender' value='여자'>여자</li>
+			
+			<li>
+			<label for='job'>직업</label> 
+			<select>
+					<option value='프로그래머'>프로그래머</option>
+					<option value='경영인'>경영인</option>
+					<option value='학생'>학생</option>
+			</select>
+			</li>
+			
+			<li>
+			<label for='hobby'>취미</label> 
+			<input type='checkbox'name='hobby1' value='잠자기'>잠자기 
+			<input type='checkbox'name='hobby2' value='먹기'>먹기 
+			<input type='checkbox'name='hobby3' value='숨쉬기'>숨쉬기 
+			<input type='checkbox'name='hobby4' value='멍때리기'>멍때리기
+			</li>
+			
+			<li>
+			<label for='gender'>성별</label> 
+			<input type='radio'name='gender2' value='남자'>남자 
+			<input type='radio'name='gender2' value='여자'>여자<br/>
+				
+				가장 여행하고싶은 나라<input type='text' list='countries'>
+				<Datalist id='countries'>
+				<option value='스위스'></option>
+				<option value='독일'></option>
+				<option value='뉴질랜드'></option>
+				</Datalist>
+			</li>
+				
+			<li><input type='submit' value='확인'> <input type='reset'
+				value='취소'>
+			</li>
+		</ol>
+
+
+	</fieldset>
+
+</body>
+</html>

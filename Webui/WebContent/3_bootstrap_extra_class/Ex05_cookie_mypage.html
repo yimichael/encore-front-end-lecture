@@ -1,0 +1,67 @@
+<!-- 
+이 페이지는  http://bootstrapk.com/components/ 에 있는 내용을 여기에 복사해서 확인하세요.
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 기본 샘플 확인 </title>
+    
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <style type="text/css">
+    	.img_border > img { width: 100px; height:140px ; display: block;  }
+    	.img_border {  display:inline-block;}
+    	.img_border > span { display:block; text-align:center; cursor:pointer; font-size: 25px; }
+    								/* text-align:center 속성은 block 요소에만 적용된다 */
+    								
+    	.select { color: red;  }
+    </style>
+    
+   <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 쿠키 라이브리러리  -->
+    <script type="text/javascript"  src="cookie/jquery.cookie.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    /*
+     $(function(){
+     	var heart1 = $.cookie('heart1');
+     	if( heart1 == undefined ) {  $('#heart1').css('display','none') }
+     	
+     	var heart2 = $.cookie('heart2');
+     	if( heart2 == undefined ) {  $('#heart2').css('display','none') }
+     	
+     	var heart3 = $.cookie('heart3');
+     	if( heart3 == undefined ) {  $('#heart3').css('display','none') }
+     });
+     */
+     </script>
+     
+</head>
+<body>
+<!--  ............................................................................  -->   
+
+<div id='imgs'>
+	<div class='img_border'  id='heart1'>
+		<img src='images/changeImages/btn_img1.jpg'>
+	</div>
+ 	<div class='img_border' id='heart2'>
+		<img src='images/changeImages/btn_img2.jpg'>
+	</div>
+		<div class='img_border' id='heart3'>
+		<img src='images/changeImages/btn_img3.jpg'>
+	</div>    	 
+ 	 
+ </div>
+<!--  ............................................................................  --> 
+	
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>부트스트랩 101 템플릿</title>
+
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+ 	<style type='text/css'>
+ 		.row { margin-bottom:10px; margin-top:10px; }
+ 		.col-lg-2, .col-md-3, .col-xs-6, 
+ 		.col-xs-12, .col-md-4, .col-md-8, .col-lg-6
+ 		
+ 		{
+ 			border : 1px solid blue;
+ 			padding: 10px;
+ 		}
+ 	</style>    
+</head>
+  <body>
+  
+    	<div class='container'>
+ <!-- 모바일에서 컬럼들이 하나는 꽉찬너비로, 다른 하나는 절반너비로 쌓이게 합니다 -->
+<div class="row">
+  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+
+<!-- 컬럼들은 모바일에서 50% 너비로 시작하고 데스크탑에서는 33.3% 너비가 됩니다 -->
+<div class="row">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+
+<!-- 컬럼들은 모바일과 데스크탑에서 항상 50% 너비가 됩니다 -->
+<div class="row">
+  <div class="col-xs-12 col-lg-6">.col-xs-6</div>
+  <div class="col-xs-12 col-lg-6">.col-xs-6</div>
+</div>
+ 
+    	  <div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+</div>
+    	<!-- 
+  		<div class='row'>
+  			<div class='col-lg-2'>1행</div>
+  			<div class='col-lg-2'>1행</div>
+  			<div class='col-lg-2'>1행</div>
+  			<div class='col-lg-2'>1행</div>
+  			<div class='col-lg-2'>1행</div>
+  			<div class='col-lg-2'>1행</div>
+  		</div>
+  		<div class='row'>
+  			<div class='col-md-3'>1행</div>
+  			<div class='col-md-3'>1행</div>
+  			<div class='col-md-3'>1행</div>
+  			<div class='col-Md-3'>1행</div>
+  		</div>
+  		<div class='row'>
+  			<div class='col-xs-6'>1행</div>
+  			<div class='col-xs-6'>1행</div>
+  		</div>
+  			 -->
+  	</div> <!-- class='container' end -->
+  	
+  	
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Plugin </title>
+	<style type="text/css">
+				*{margin:0;padding:0;}
+				img{border:none 0;vertical-align:top;}
+				#banner_wrap{position:relative;width:470px;margin:0 auto;}
+				
+				#prevBtn{position:absolute;left:0;top:10px;} 
+				#nextBtn{position:absolute;right:15px;top:10px;} 
+	</style>
+
+<!-- 부트스트랩 css -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+   
+<!-- jQuery library (served from Google) -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./bxslider/js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="./bxslider/css/jquery.bxslider.css" rel="stylesheet" />
+
+<!-- 부트스트랩 js -->
+<script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+   <div id="banner_wrap">
+      <ul id="slide_banner">
+         <li><a href="#"><img src="images/bxslider/pic_t1.jpg" alt="사진1" /></a></li>
+         <li><a href="#"><img src="images/bxslider/pic_t2.jpg" alt="사진2" /></a></li>
+         <li><a href="#"><img src="images/bxslider/pic_t3.jpg" alt="사진3" /></a></li>
+         <li><a href="#"><img src="images/bxslider/pic_t4.jpg" alt="사진4" /></a></li>
+         <li><a href="#"><img src="images/bxslider/pic_t5.jpg" alt="사진5" /></a></li>
+         <li><a href="#"><img src="images/bxslider/pic_t6.jpg" alt="사진6" /></a></li>
+         <li><a href="#"><img src="images/bxslider/pic_t7.jpg" alt="사진7" /></a></li>
+         <li><a href="#"><img src="images/bxslider/pic_t8.jpg" alt="사진8" /></a></li>
+      </ul>
+      <p><a href="#" id="prevBtn"><img src="images/bxslider/prev_btn.png" alt="이전버튼" /></a></p>
+      <p><a href="#" id="nextBtn"><img src="images/bxslider/next_btn.png" alt="다음버튼" /></a></p>
+   </div>
+   
+   
+   <script type="text/javascript">
+  //### bxslider.com 을 보면서  기본 속성을 지정해야 나옴.
+  var mySlide = $('#slide_banner').bxSlider({
+	  minSlides : 4,
+	  maxSlides : 4,
+	  slideMargin: 10,
+	  slideWidth: 90,
+	  auto: true,
+	  speed : 1000,
+	  moveSlides : 1
+	  
+  });
+	
+	
+//이전 버튼을 클릭하면 이전 슬라이드로 전환됩니다.  
+   $("#prevBtn").click( function(){
+    //이전 슬라이드 배너로 이동됩니다.
+    mySlide.goToPrevSlide();
+    return false; //<a>에 링크를 차단합니다.
+   });
+
+//다음 버튼을 클릭하면 다음 슬라이드로 전환됩니다.
+   $("#nextBtn").click( function(){
+    //다음 슬라이드 배너로 이동됩니다.
+    mySlide.goToNextSlide();
+    return false;
+   });
+
+
+</script>
+</body>
+</html>

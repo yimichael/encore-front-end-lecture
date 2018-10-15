@@ -1,0 +1,77 @@
+<!-- 
+이 페이지는  http://bootstrapk.com/components/ 에 있는 내용을 여기에 복사해서 확인하세요.
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 기본 샘플 확인 </title>
+    
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <style type="text/css">
+    	.img_border > img { width: 100px; height:140px ; display: block;  }
+    	.img_border {  display:inline-block;}
+    	.img_border > span { display:block; text-align:center; cursor:pointer; font-size: 25px; }
+    								/* text-align:center 속성은 block 요소에만 적용된다 */
+    								
+    	.select { color: red;  }
+    </style>
+    
+   <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 쿠키 라이브리러리  -->
+    <script type="text/javascript"  src="cookie/jquery.cookie.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+     $(function(){
+     	// 각 하트모양이 클릭할 때 해당 요소에 select 클래스를 토글처리
+    	$('.heart').click(function(){
+    		$(this).toggleClass('select');
+    	});
+   	
+     	// 내사물함 버튼을 누를 때 선택한 목록의 해당 아이디값을 쿠키에 저장
+    	$('#btn').click(function(){
+    		$('.select').each(function(){
+    			// alert( $(this).attr('id') );
+    			$.cookie('Maestro'+$(this).attr('id'), 'ok');
+    		});
+    	});
+     	
+     });
+     
+     </script>
+     
+</head>
+<body>
+	<!--  ............................................................................  -->   
+
+<div id='imgs'>
+	<div class='img_border'>
+		<img src='images/changeImages/btn_img1.jpg'>
+		<span class="heart" id='heart1'>♥</span>
+	</div>
+ 	<div class='img_border'>
+		<img src='images/changeImages/btn_img2.jpg'>
+		<span class="heart"  id='heart2'>♥</span>
+	</div>
+		<div class='img_border'>
+		<img src='images/changeImages/btn_img3.jpg'>
+		<span class="heart"  id='heart3'>♥</span>
+	</div>    	
+ 
+ 	 <button id='btn' class='btn btn-default'>내사물함에 담기</button>
+ </div>
+
+	<a href='Ex05_cookie_mypage.html'>마이페이지</a>
+	<!--  ............................................................................  --> 
+	
+
+</body>
+</html>

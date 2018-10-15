@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 연습</title>
+<style>
+	body div#point100{color:orange;}
+	div #point100 {color:green;}
+	div .point10 {color:purple;}
+	/* 	#은 id  .은 class 별칭 */  body. div #  tag별로 가중치 추가. 점수가 높은 값으로 표현.
+	div {color :#ff0000;}
+	div {color :#000000;}
+	/* 	RGB로 표현 11(R)22(G)33(B). ##112233 각 자리수별 RGB표현. 두 수가 동일할 경우 1자리수만 넣어도 가능 #000 #fff */
+	
+	input[type=text] { border: 2px dotted gray; }
+</style>
+</head>
+<body>
+	
+	<div id="point100" class="point10">안녕하세요</div>
+	
+	
+	<p>
+		<input type="text" value="입력1">
+		<input type="checkbox"> 선택
+		<input type="radio" name="rd"  checked="checked"> 예
+		<input type="radio" name="rd"> 아니오
+		<input type="text" value="입력2" disabled="disabled">		
+		<input type="button" value="확인">
+		<input type="button" value="취소">
+	</p>
+	
+	
+</body>
+</html>

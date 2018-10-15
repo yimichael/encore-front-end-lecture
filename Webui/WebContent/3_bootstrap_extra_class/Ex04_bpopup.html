@@ -1,0 +1,60 @@
+<!-- 비팝업 : http://dinbror.dk/bpopup/  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>BPopUP</title>
+    <!-- 부트스트랩  CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css"  href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />	
+  
+
+	<!-- 제이쿼리  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript"   src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	<!-- 부트스트랩 JS  -->
+	<script src="js/bootstrap.min.js"></script>
+	
+	<!-- 비팝업  -->
+    <script type="text/javascript" src="./bpopup/jquery.bpopup.min.js"></script>
+    <style>          
+  			#imgs > img {  width:120px;   height:120px }
+     </style>
+</head>
+<body>
+    <button id="popup"> 누르면 팝업이 뜹니다 </button>
+    <div id='imgs'>
+     	<img src='images/changeImages/btn_img1.jpg'>
+     	<img src='images/changeImages/btn_img2.jpg'>
+     	<img src='images/changeImages/btn_img3.jpg'>
+     </div>
+     <div id="element_popup"></div>
+
+<!-- 필요한 코딩 추가 -->
+<script>
+	// 버튼 클릭시 팝업
+ 	$('#popup').click(function(){
+ 		$('#element_popup').bPopup({
+ 			content:'image',
+ 			contentContainer: '#element_popup',
+ 			loadUrl: './images/bxslider/pic_1.jpg'
+ 		});
+ 	});
+
+ 	// 각각의 이미지 클릭시 팝업
+ 	 	$('div#imgs>img').click(function(){
+ 		$('#element_popup').bPopup({
+ 			content:'image',
+ 			contentContainer: '#element_popup',
+ 			loadUrl: $(this).attr('src')
+ 		});
+ 	});
+ 	
+</script>
+</body>
+</html>
