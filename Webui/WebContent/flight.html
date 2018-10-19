@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> D.Y.T do your trip </title>
+
+    <!-- Bootstrap -->
+    <link href="3_bootstrap_sample/css/nomalize.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/bootstrap.min.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/style.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/animate.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/jquery.fancybox.css" rel="stylesheet">
+
+<style>
+<!-- carousel-->
+#carousel-generic{margin:100px 100px 100px 100px;}
+
+</style>
+
+
+<style>
+<!--전체여행지 버튼-->
+
+<!--전체여행지 버튼-->
+
+<!--인기있는 여행지 포트폴리오-->
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* Center website */
+.main {
+    max-width: 1130px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+<!-- 테마가 있는 여행-->
+
+<!-- 테마가 있는 여행-->
+</style>
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll" data-offset="50">
+       
+        <div class="container">
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+            <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+           
+            <!-- 네비게이션 메뉴 -->
+            <div class="collapse navbar-collapse navbar-left navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#"> D.Y.T do your trip </a></li>                   
+              </ul>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="DYT_login.html"> 로그인 </a></li>  
+                <li><a href="DYT_account.html"> 회원가입 </a></li>                   
+              </ul>
+            </div>
+            </div><!-- /.navbar-collapse -->
+            
+          </nav>
+        </div>
+        <hr>
+     
+        <br>
+       <p></p>
+
+	<div class="container">
+	<div class='indentation'>
+		<button type="button" class="btn btn-link btn-md">전체여행지</button>
+		<button type="button" class="btn btn-link btn-md">홈</button>
+		<button type="button" class="btn btn-link btn-md">투어&티켓</button>
+		<button type="button" class="btn btn-link btn-md">항공권</button>
+		<button type="button" class="btn btn-link btn-md">숙소</button>
+	</div>
+	</div>
+	
+
+	<div id="carousel-generic" class="carousel slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-generic" data-slide-to="0" class=""></li>
+            <li data-target="#carousel-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-generic" data-slide-to="2"></li>             
+          </ol>
+  
+           <!-- Carousel items -->
+
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="https://d2ur7st6jjikze.cloudfront.net/cms/532_original_1539566812.jpg?1539566812" alt="Los Angeles"
+					style="width: 100%;">
+			</div>
+
+			<div class="item">
+				<img src="https://d2ur7st6jjikze.cloudfront.net/cms/540_original_1539848255.jpg?1539848255" alt="Chicago"
+					style="width: 100%;">
+			</div>
+
+			<div class="item">
+				<img src="https://d2ur7st6jjikze.cloudfront.net/cms/274_original_1526635303.jpg?1526635303" alt="New york"
+					style="width: 100%;">
+			</div>
+		</div>
+		
+<!-- <div class="mrt_recent_slide promo" id="top_banners_div" style="display: block;"> -->
+<!-- 	<div class="swiper-container swiper-top-banners swiper-container-horizontal"> -->
+<!-- 	<div class="swiper-wrapper" id="top_banners" style="transition-duration: 0ms; transform: translate3d(-1080px, 0px, 0px);"> -->
+<!-- 	<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" onclick="airfn_mrt_cms_link('https://www.myrealtrip.com/campaigns/Taipeichinaairlines'); return false;" style="width: 520px; margin-right: 20px;" data-swiper-slide-index="1"> -->
+<!-- 	<a href="#"><div class="banner__item" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/cms/540_original_1539848255.jpg?1539848255)"> -->
+<!-- 	</div> -->
+<!-- 	</a> -->
+<!-- </div> -->
+<!-- 	<div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" onclick="airfn_mrt_cms_link('https://www.myrealtrip.com/campaigns/2018flightsopenevent'); return false;" style="width: 520px; margin-right: 20px;" data-swiper-slide-index="2"> -->
+<!-- 	<a href="#"><div class="banner__item" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/cms/274_original_1526635303.jpg?1526635303)"> -->
+<!-- 	</div> -->
+<!-- 	</a> -->
+<!-- 	</div> -->
+<!-- 	<div class="swiper-slide swiper-slide-active" onclick="airfn_mrt_cms_link('https://www.myrealtrip.com/campaigns/mrtchinaairlines'); return false;" style="width: 520px; margin-right: 20px;" data-swiper-slide-index="0"> -->
+<!-- 	<a href="#"><div class="banner__item" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/cms/532_original_1539566812.jpg?1539566812)"> -->
+<!-- 	</div> -->
+<!-- 	</a> -->
+<!-- 	</div> -->
+<!-- 	<div class="swiper-slide swiper-slide-next" onclick="airfn_mrt_cms_link('https://www.myrealtrip.com/campaigns/Taipeichinaairlines'); return false;" style="width: 520px; margin-right: 20px;" data-swiper-slide-index="1">  	<a href="#"><div class="banner__item" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/cms/540_original_1539848255.jpg?1539848255)"></div></a></div><div class="swiper-slide swiper-slide-duplicate-prev" onclick="airfn_mrt_cms_link('https://www.myrealtrip.com/campaigns/2018flightsopenevent'); return false;" style="width: 520px; margin-right: 20px;" data-swiper-slide-index="2">  	<a href="#"><div class="banner__item" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/cms/274_original_1526635303.jpg?1526635303)"></div></a></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" onclick="airfn_mrt_cms_link('https://www.myrealtrip.com/campaigns/mrtchinaairlines'); return false;" style="width: 520px; margin-right: 20px;" data-swiper-slide-index="0">  	<a href="#"><div class="banner__item" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/cms/532_original_1539566812.jpg?1539566812)"></div></a></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" onclick="airfn_mrt_cms_link('https://www.myrealtrip.com/campaigns/Taipeichinaairlines'); return false;" style="width: 520px; margin-right: 20px;" data-swiper-slide-index="1">  	<a href="#"><div class="banner__item" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/cms/540_original_1539848255.jpg?1539848255)"></div></a></div></div> -->
+<!--   	<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> -->
+<!--   	<!-- Add Pagination --> -->
+<!--     <div class="swiper-pagination swiper-top-banners-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div> -->
+<!--     Add Arrows -->
+<!--     <div class="swiper-button-next swiper-top-banners-button-next" tabindex="0" role="button" aria-label="Next slide"></div> -->
+<!--     <div class="swiper-button-prev swiper-top-banners-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div> -->
+<!-- </div> -->
+	
+	
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-generic"
+			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#carousel-generic"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right"></span> <span
+			class="sr-only">Next</span>
+		</a>
+
+	</div>
+<!--  fluid container 끝 -->
+
+<!-- 인기있는 여행지 포트폴리오 시작 -->
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+
+
+<!-- <h3>인기있는 여행지</h3> -->
+
+<!-- <div id="myBtnContainer"> -->
+<!--   <button class="btn active" onclick="filterSelection('all')"> Show all</button> -->
+<!--   <button class="btn" onclick="filterSelection('osaka')"> 오사카</button> -->
+<!--   <button class="btn" onclick="filterSelection('tokyo')"> 도쿄</button> -->
+<!--   <button class="btn" onclick="filterSelection('paris')"> 파리</button> -->
+</div>
+
+<!-- Portfolio Gallery Grid -->
+
+<!-- <div class="row"> -->
+<!-- <a href="javascript:void(0);"> -->
+<!-- <div class="img" style="background-image: url(https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/4_medium_1525937456.jpg?1525937456)"></div> -->
+<!-- 	<div class="bottom"><span class="nation">오사카</span>  	 -->
+<!-- 	<span class="trip">서울 - 오사카</span>  	<span class="date">9월 1일 - 12월 31일</span>  	 -->
+<!-- 	<span class="price">134,800원 ~ 
+		<div style='text-align:right'>
+		<em class="airline">직항</em></span></div> -->
+<!-- 	</div> -->
+<!-- </a> -->
+
+
+<!--   <div class="column osaka"> -->
+<!--     <div class="content"> -->
+<!--      <a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/4_medium_1525937456.jpg?1525937456"> -->
+<!--       <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/4_medium_1525937456.jpg?1525937456" alt="osaka castle" style="width:100%"> -->
+<!--      </a> -->
+<!--       <h4>오사카</h4> -->
+<!--       <span class="trip">서울 - 오사카</span>  <p/>	<span class="date">10월 10일 - 10월 15일</span> </p>      -->
+<!--       <span class="price">200,000원 ~  -->
+<!--       <em class="airline">직항</em> -->
+<!--       </span> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+  
+<!--    <div class="column osaka"> -->
+<!--     <div class="content"> -->
+<!--      <a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/9_medium_1525941633.jpg?1525941633"> -->
+<!--       <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/9_medium_1525941633.jpg?1525941633" alt="danang" style="width:70%"> -->
+<!--      </a> -->
+<!--       <h4>다낭</h4> -->
+<!--       <span class="trip">서울 - 다낭</span>  <p/>	<span class="date">10월 20일 - 10월 25일</span> </p>      -->
+<!--       <span class="price">300,000원 ~  -->
+<!--       <em class="airline">직항</em> -->
+<!--       </span> -->
+<!--       </div> -->
+<!--     </div> -->
+    
+<!--    <div class="column osaka"> -->
+<!--     <div class="content"> -->
+<!--      <a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/14_medium_1525946010.jpg?1525946010"> -->
+<!--       <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/14_medium_1525946010.jpg?1525946010" alt="danang" style="width:70%"> -->
+<!--      </a> -->
+<!--       <h4>베이징</h4> -->
+<!--       <span class="trip">서울 - 베이징</span>  <p/>	<span class="date">11월 1일 - 11월 15일</span> </p>      -->
+<!--       <span class="price">200,000원 ~  -->
+<!--       <em class="airline">직항</em> -->
+<!--       </span> -->
+<!--       </div> -->
+<!--     </div> -->
+    
+<!--    <div class="column osaka"> -->
+<!--     <div class="content"> -->
+<!--      <a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/10_medium_1525941634.jpg?1525941634"> -->
+<!--       <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/10_medium_1525941634.jpg?1525941634" alt="danang" style="width:70%"> -->
+<!--      </a> -->
+<!--       <h4>뉴욕</h4> -->
+<!--       <span class="trip">서울 - 뉴욕</span>  <p/>	<span class="date">12월 14일 - 12월 31일</span> </p>      -->
+<!--       <span class="price">800,000원 ~  -->
+<!--       <em class="airline">1회 경유</em> -->
+<!--       </span> -->
+<!--       </div> -->
+<!--    </div> -->
+    
+<!--   <div class="column tokyo"> -->
+<!--     <div class="content"> -->
+<!--     <a class="fancybox" rel="gallery2" href="./images/tokyo1.jpg"> -->
+<!--       <img src="./images/tokyo1.jpg" alt="street" style="width:100%"> -->
+<!--     </a> -->
+<!--       <h4>도쿄</h4> -->
+<!--       <p>길거리</p> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="column tokyo"> -->
+<!--     <div class="content"> -->
+<!--     <a class="fancybox" rel="gallery2" href="./images/tokyo2.jpg"> -->
+<!--     <img src="./images/tokyo2.jpg" alt="night view" style="width:100%"> -->
+<!--     </a> -->
+<!--       <h4>도쿄</h4> -->
+<!--       <p>야경</p> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="column tokyo"> -->
+<!--     <div class="content"> -->
+<!--     <a class="fancybox" rel="gallery2" href="./images/tokyo3.jpg"> -->
+<!--     <img src="./images/tokyo3.jpg" alt="night street" style="width:100%"> -->
+<!--     </a> -->
+<!--       <h4>도쿄</h4> -->
+<!--       <p>밤거리</p> -->
+<!--     </div> -->
+<!--   </div> -->
+
+<!--   <div class="column paris"> -->
+<!--     <div class="content"> -->
+<!--     <a class="fancybox" rel="gallery2" href="./images/paris1.jpg"> -->
+<!--       <img src="./images/paris1.jpg" alt="river" style="width:100%"> -->
+<!--     </a> -->
+<!--       <h4>파리</h4> -->
+<!--       <p>센강</p> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="column paris"> -->
+<!--     <div class="content"> -->
+<!--     <a class="fancybox" rel="gallery2" href="./images/paris2.jpg"> -->
+<!--       <img src="./images/paris2.jpg" alt="door" style="width:100%"> -->
+<!--     </a> -->
+<!--       <h4>파리</h4> -->
+<!--       <p>샹제리제 거리</p> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="column paris"> -->
+<!--     <div class="content"> -->
+<!--     <a class="fancybox" rel="gallery2" href="./images/paris3.jpg"> -->
+<!--       <img src="./images/paris3.jpg" alt="door" style="width:100%"> -->
+<!--     </a> -->
+<!--       <h4>Woman</h4> -->
+<!--       <p>Lorem ipsum dolor..</p> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- <!-- END GRID --> -->
+<!-- </div> -->
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("osaka")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<!-- 인기있는 여행지 포트폴리오 끝 -->
+
+<!-- 인기 여행지 시작 -->
+<div class="container portfolio  wp4 delay-05s" >
+<h3 style='padding:8px;'class="sans">인기 여행지</h3>  
+ <div class="row">
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/4_medium_1525937456.jpg?1525937456">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/4_medium_1525937456.jpg?1525937456" alt=""></a> 
+	    <div class="caption">
+		<h4>오사카</h4>
+	    <span class="trip">서울 - 오사카</span>  <p/>	<span class="date">10월 10일 - 10월 15일</span> </p>     
+	    <span class="price">200,000원 ~ 
+	    <em class="airline">직항</em>
+	    </span>
+	    </div>  
+   </div>                   
+  </div> 
+   
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/9_medium_1525941633.jpg?1525941633">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/9_medium_1525941633.jpg?1525941633" alt=""></a> 
+	    <div class="caption">
+		<h4>다낭</h4>
+	    <span class="trip">서울 - 다낭</span>  <p/>	<span class="date">10월 20일 - 10월 25일</span> </p>     
+	    <span class="price">300,000원 ~ 
+	    <em class="airline">직항</em>
+	    </span>
+	    </div>  
+   </div>  
+  </div>
+  
+	<div class="col-xs-3 col-md-3">
+   	<div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/14_medium_1525946010.jpg?1525946010">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/14_medium_1525946010.jpg?1525946010" alt=""></a> 
+	    <div class="caption">
+		<h4>베이징</h4>
+	    <span class="trip">서울 - 베이징</span>  <p/>	<span class="date">11월 1일 - 11월 15일</span> </p>     
+	    <span class="price">200,000원 ~ 
+	    <em class="airline">직항</em>
+	    </span>
+	    </div>  
+     </div>
+    </div>
+   
+  <div class="col-xs-3 col-md-3">
+   	<div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/10_medium_1525941634.jpg?1525941634">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/10_medium_1525941634.jpg?1525941634" alt=""></a> 
+	    <div class="caption">
+		<h4>뉴욕</h4>
+	    <span class="trip">서울 - 뉴욕</span>  <p/>	<span class="date">12월 14일 - 12월 31일</span> </p>     
+	    <span class="price">800,000원 ~ 
+	    <em class="airline">1회 경유</em>
+	    </span>
+	    </div>  
+    </div>
+   </div>  
+</div> 
+<!-- 인기 여행지 끝 -->
+ 
+ 
+<!-- 특가 항공권 시작 -->
+<div class="container portfolio  wp4 delay-05s" >
+<h3 style='padding:8px;'class="sans">특가 항공권</h3>  
+ <div class="row">
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/5_medium_1525937881.jpg?1525937881">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/5_medium_1525937881.jpg?1525937881" alt=""></a> 
+	    <div class="caption">
+		<h4>싱가폴</h4>
+	    <span class="trip">서울 - 싱가폴</span>  <p/>	<span class="date">10월 10일 - 12월 31일</span> </p>     
+	    <span class="price">400,000원 ~ 
+	    <em class="airline">직항</em>
+	    </span>
+	    </div>  
+   </div>                   
+  </div> 
+   
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/8_medium_1525938420.jpg?1525938420">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/flight_cms_desktop/8_medium_1525938420.jpg?1525938420" alt=""></a> 
+	    <div class="caption">
+		<h4>로스앤젤레스</h4>
+	    <span class="trip">서울 - 로스앤젤레스</span>  <p/>	<span class="date">10월 10일 - 12월 31일</span> </p>     
+	    <span class="price">800,000원 ~ 
+	    <em class="airline">직항</em>
+	    </span>
+	    </div>  
+   </div>  
+  </div>
+  
+	<div class="col-xs-3 col-md-3">
+   	<div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="./images/TOKYOT1.png">
+    <img src="./images/TOKYOT1.png" alt=""></a> 
+	    <div class="caption">
+		<h4>도쿄</h4>
+	    <span class="trip">서울 - 도쿄</span>  <p/>	<span class="date">10월 10일 - 12월 31일</span> </p>     
+	    <span class="price">150,000원 ~ 
+	    <em class="airline">직항</em>
+	    </span>
+	    </div>  
+     </div>
+    </div>
+   
+  <div class="col-xs-3 col-md-3">
+   	<div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="./images/sanghai.png">
+    <img src="./images/sanghai.png" alt=""></a> 
+	    <div class="caption">
+		<h4>상하이</h4>
+	    <span class="trip">서울 - 상하이</span>  <p/>	<span class="date">10월 10일 - 12월 31일</span> </p>     
+	    <span class="price">200,000원 ~ 
+	    <em class="airline">1회 경유</em>
+	    </span>
+	    </div>  
+    </div>
+   </div>  
+</div> 
+<h3>항공권 공지사항</h3>
+ 	<table border='0'>
+		<tr>
+			<td>[변경] 발권 완료한 항공권 환불(발권 일자와 환불 요청 일자가 다른 경우) 방법	2018-10-11</td>
+		</tr>
+		<tr>
+			<td>[취소] 예약 부도 위약금(NO-SHOW PENALTY)란?					2018-10-11</td>
+		</tr>
+		<tr>
+			<td>[변경] 발권 완료후 영문 SPELL 변경이 가능한가요?					2018-10-11</td>		</tr>
+	</table>
+ 
+ 
+<footer>
+  <p>Posted by: D.Y.T</p>
+  <p>Contact information: <a href="#">DYT.com</a></p>
+  <p>상호명 DYT | 대표 : DYT | 개인정보책임자 : DYT
+사업자등록번호 : ###-##-##### | 통신판매업신고번호 : 2018-서울서초-##### | 사업자정보확인
+서울특별시 서초구 길거리 (주)DYT
+일반 전화문의 : ####-#### | 일반 이메일문의 : DYT@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+항공권 전화문의 : ####-#### | 항공권 이메일문의 : flights@DY.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+마케팅/제휴 이메일문의 : marketing@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무
+자사는 서울특별시관광협회 공제영업보증보험에 가입이 되어 있지 않습니다.
+DYT는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="3_bootstrap_sample/js/bootstrap.min.js"></script>
+    <script src="3_bootstrap_sample/js/bootstrap-hover-dropdown.js"></script>
+    <script src="3_bootstrap_sample/js/animatescroll.min.js"></script>
+    <script src="3_bootstrap_sample/js/simpleparallax.js"></script>
+    <script src="3_bootstrap_sample/js/waypoints.min.js"></script>
+    <script src="3_bootstrap_sample/js/jquery.fancybox.js"></script>
+    <script>
+    $('.carousel').carousel({
+  	  interval:3000
+  	  
+    })
+
+        
+
+
+    </script>  
+</body>
+</html>

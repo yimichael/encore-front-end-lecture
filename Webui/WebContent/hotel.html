@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> D.Y.T do your trip </title>
+
+    <!-- Bootstrap -->
+    <link href="3_bootstrap_sample/css/nomalize.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/bootstrap.min.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/style.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/animate.css" rel="stylesheet">
+    <link href="3_bootstrap_sample/css/jquery.fancybox.css" rel="stylesheet">
+
+<style>
+		.trip{word-spacing:90px}
+		.review{word-spacing:60px}
+</style>
+
+
+<style>
+<!--전체여행지 버튼-->
+
+<!--전체여행지 버튼-->
+
+<!--인기있는 여행지 포트폴리오-->
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* Center website */
+.main {
+    max-width: 1130px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+<!-- 테마가 있는 여행-->
+
+<!-- 테마가 있는 여행-->
+</style>
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll" data-offset="50">
+       
+        <div class="container">
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+            <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+           
+            <!-- 네비게이션 메뉴 -->
+            <div class="collapse navbar-collapse navbar-left navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#"> D.Y.T do your trip </a></li>                   
+              </ul>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-1-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="DYT_login.html"> 로그인 </a></li>  
+                <li><a href="DYT_account.html"> 회원가입 </a></li>                   
+              </ul>
+            </div>
+            </div><!-- /.navbar-collapse -->
+            
+          </nav>
+        </div>
+        <hr>
+     
+        <br>
+       <p></p>
+
+	<div class="container">
+	<div class='indentation'>
+		<button type="button" class="btn btn-link btn-md">전체여행지</button>
+		<button type="button" class="btn btn-link btn-md">홈</button>
+		<button type="button" class="btn btn-link btn-md">투어&티켓</button>
+		<button type="button" class="btn btn-link btn-md">항공권</button>
+		<button type="button" class="btn btn-link btn-md">숙소</button>
+	</div>
+	</div>
+	
+
+          <!-- Indicators -->
+  
+           <!-- Carousel items -->
+
+
+	
+	
+		<!-- Controls -->
+
+
+
+<!--  fluid container 끝 -->
+
+<!-- 인기있는 여행지 포트폴리오 시작 -->
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("osaka")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<!-- 인기있는 여행지 포트폴리오 끝 -->
+
+<!-- 인기 여행지 시작 -->
+<div class="container portfolio  wp4 delay-05s" >
+<h3 style='padding:8px;'class="sans">인기 호텔</h3> 
+ 	<div class='indentation'>
+		<button type="button" class="btn btn-link btn-md">오사카</button>
+		<button type="button" class="btn btn-link btn-md">후쿠오카</button>
+		<button type="button" class="btn btn-link btn-md">라스베가스</button>
+		<button type="button" class="btn btn-link btn-md">도쿄</button>
+		<button type="button" class="btn btn-link btn-md">로마</button>
+		<button type="button" class="btn btn-link btn-md">타이베이</button>
+		<button type="button" class="btn btn-link btn-md">...</button>
+	</div>
+ <div class="row">
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://q-xx.bstatic.com/xdata/images/hotel/max500/16277452.jpg?k=1b44cc391c817b45c8041ab56325dc299a3840d788b9b5318e81d5c7047579a6&o=">
+    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/16277452.jpg?k=1b44cc391c817b45c8041ab56325dc299a3840d788b9b5318e81d5c7047579a6&o=" alt=""></a> 
+	    <div class="caption">
+		<h4>난바 돈코츠 라멘</h4>
+	    <span class="trip">우수함		\200,000</span>  <p/>	<span class='review'>1000개후기  	1박최저가</span> </p>     
+	    </div>  
+   </div>                   
+  </div> 
+   
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://q-xx.bstatic.com/xdata/images/hotel/max500/117976330.jpg?k=cac3fa38645ed1021e854a6418c5cef4c98067b74e3f300609c6a4b7ea2f51ea&o=">
+    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/117976330.jpg?k=cac3fa38645ed1021e854a6418c5cef4c98067b74e3f300609c6a4b7ea2f51ea&o=" alt=""></a> 
+	    <div class="caption">
+		<h4>난바 맛있다 타코야끼</h4>
+	    <span class="trip">우수함		\170,000</span>  <p/>	<span class='review'>1200개후기  	1박최저가</span> </p>     
+	    </div>  
+   </div>                   
+  </div> 
+  
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://q-xx.bstatic.com/xdata/images/hotel/max500/6495974.jpg?k=352eb7bb333485f9af87ee1bf5e17266de9ce55e672a809ce3c35234ca7fdd6c&o=">
+    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/6495974.jpg?k=352eb7bb333485f9af87ee1bf5e17266de9ce55e672a809ce3c35234ca7fdd6c&o=" alt=""></a> 
+	    <div class="caption">
+		<h4>난바 돈까스 가츠동</h4>
+	    <span class="trip">우수함		\230,000</span>  <p/>	<span class='review'>1500개후기  	1박최저가</span> </p>     
+	    </div>  
+   </div>                   
+  </div> 
+
+ <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://q-xx.bstatic.com/xdata/images/hotel/max500/100767934.jpg?k=498235f381083b313234d1850336ce2f8a06f3457b80a278baf9ff1ff16918ef&o=">
+    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/100767934.jpg?k=498235f381083b313234d1850336ce2f8a06f3457b80a278baf9ff1ff16918ef&o=" alt=""></a> 
+	    <div class="caption">
+		<h4>난바 3대째 스시집</h4>
+	    <span class="trip">우수함		\300,000</span>  <p/>	<span class='review'>3000개후기  	1박최저가</span> </p>     
+	    </div>  
+   </div>                   
+  </div> 
+</div> 
+<!-- 인기 호텔 끝 -->
+ 
+ 
+<!-- 인기 한인 민박 시작 -->
+<div class="container portfolio  wp4 delay-05s" >
+<h3 style='padding:8px;'class="sans">인기 한인 민박</h3>  
+ 	<div class='indentation'>
+		<button type="button" class="btn btn-link btn-md">오사카</button>
+		<button type="button" class="btn btn-link btn-md">로마</button>
+		<button type="button" class="btn btn-link btn-md">런던</button>
+		<button type="button" class="btn btn-link btn-md">파리</button>
+		<button type="button" class="btn btn-link btn-md">바르셀로나</button>
+		<button type="button" class="btn btn-link btn-md">프라하</button>
+		<button type="button" class="btn btn-link btn-md">로스앤젤레스</button>
+		<button type="button" class="btn btn-link btn-md">마드리드</button>
+		<button type="button" class="btn btn-link btn-md">피렌체</button>
+		<button type="button" class="btn btn-link btn-md">...</button>
+	</div>
+ <div class="row">
+ <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/offer_photos/30582/193053_medium_1525754827.jpg?1525754827">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/offer_photos/30582/193053_medium_1525754827.jpg?1525754827" alt=""></a> 
+	    <div class="caption">
+		<h4>한인민박. 오사카 라멘</h4>
+	    <span class="trip2">후기 100개</span>  <p/>	<span class='review2'>50,000원/1인</span> </p>     
+	    </div>  
+   </div>                   
+  </div> 
+   
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/offer_photos/35403/220459_medium_1526449498.jpg?1526449498">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/offer_photos/35403/220459_medium_1526449498.jpg?1526449498" alt=""></a> 
+	    <div class="caption">
+		<h4>한인민박. 오사카 타코야끼</h4>
+	    <span class="trip2">후기 80개</span>  <p/>	<span class='review2'>55,000원/1인</span> </p>   	    </div>  
+   </div>                   
+  </div> 
+  
+  <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/offer_photos/29564/190472_medium_1525765534.jpg?1525765534">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/offer_photos/29564/190472_medium_1525765534.jpg?1525765534" alt=""></a> 
+	    <div class="caption">
+		<h4>한인미박. 오사카 가츠동</h4>
+	    <span class="trip2">후기 130개</span>  <p/>	<span class='review2'>60,000원/1인</span> </p>   	    </div>  
+   </div>                   
+  </div> 
+
+ <div class="col-xs-3 col-md-3">
+   <div class="thumbnail">
+  	<a class="fancybox" rel="gallery2" href="https://d2ur7st6jjikze.cloudfront.net/offer_photos/36430/233147_medium_1529990513.jpg?1529990513">
+    <img src="https://d2ur7st6jjikze.cloudfront.net/offer_photos/36430/233147_medium_1529990513.jpg?1529990513" alt=""></a> 
+	    <div class="caption">
+		<h4>한인민박. 오사카 스시</h4>
+	    <span class="trip2">후기 300개</span>  <p/>	<span class='review2'>65,000원/1인</span> </p>   	    </div>  
+   </div>                   
+  </div> 
+</div> 
+<div style='text-align:center'><h3>오사카 한인민박 더보기</h3> </div>
+
+ 
+ 
+<footer>
+  <p>Posted by: D.Y.T</p>
+  <p>Contact information: <a href="#">DYT.com</a></p>
+  <p>상호명 DYT | 대표 : DYT | 개인정보책임자 : DYT
+사업자등록번호 : ###-##-##### | 통신판매업신고번호 : 2018-서울서초-##### | 사업자정보확인
+서울특별시 서초구 길거리 (주)DYT
+일반 전화문의 : ####-#### | 일반 이메일문의 : DYT@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+항공권 전화문의 : ####-#### | 항공권 이메일문의 : flights@DY.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무.
+마케팅/제휴 이메일문의 : marketing@DYT.com 운영시간(한국) 09:00 ~ 18:00, 주말/공휴일 휴무
+자사는 서울특별시관광협회 공제영업보증보험에 가입이 되어 있지 않습니다.
+DYT는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="3_bootstrap_sample/js/bootstrap.min.js"></script>
+    <script src="3_bootstrap_sample/js/bootstrap-hover-dropdown.js"></script>
+    <script src="3_bootstrap_sample/js/animatescroll.min.js"></script>
+    <script src="3_bootstrap_sample/js/simpleparallax.js"></script>
+    <script src="3_bootstrap_sample/js/waypoints.min.js"></script>
+    <script src="3_bootstrap_sample/js/jquery.fancybox.js"></script>
+    <script>
+    $('.carousel').carousel({
+  	  interval:3000
+  	  
+    })
+
+        
+
+
+    </script>  
+</body>
+</html>
