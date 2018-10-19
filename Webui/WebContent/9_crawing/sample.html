@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style>
+		.ah_roll_area .ah_a {text-decoration:none;}
+		.ah_roll_area .ah_a > .ah_r {color:red;}
+	</style>
+	<script type="text/javascript" src="./js/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+		//#### 네이버 실시간 검색어 가져오기
+		$(function(){
+			$("#naver").click(click_naver);
+			function click_naver(){			
+				$.post('./jsp/proxy_naver.jsp', function(data){				
+
+						var realrank = $(".ah_roll_area", data);	
+
+						$("#result").empty();
+						$("#result").append( realrank);
+				});			
+			
+			 }	
+		});
+		
+		//#### 멜론 목록 가져오기
+		$(function(){
+			$("#melon").click(function(){
+				$.post('./jsp/proxy_melon.jsp', function(data){				
+
+					var songchart = $(".typeRealtime>ul", data);	
+					$("#result").empty();
+					$("#result").append( songchart);
+				});
+			});
+		});		
+		
+		//#### 다음 실시간 검색어 가져오기
+		$(function(){
+			$("#daum").click(click_daum);
+			function click_daum(){
+				$.post('./jsp/proxy_daum.jsp', function(data){				
+
+					var songchart = $(".list_hotissue", data);	
+					$("#result").empty();
+					$("#result").append( songchart);
+				});
+			}
+		});		
+
+	</script>
+</head>
+<body>
+	<h1>제목</h1>
+	<button id="naver">네이버</button>
+	<button id="melon">멜론</button>
+	<button id="daum">다음</button>
+	<div id="result"></div>
+</body>
+</html>
